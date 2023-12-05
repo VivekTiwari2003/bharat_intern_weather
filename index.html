@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            background-image: url("https://filecache.mediaroom.com/mr5mr_ibmnewsroom/189462/sky-clouds-cloudy-weather.jpg");
+        }
+
+        #container {
+            width: 70%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 5%;
+        }
+
+        #left {
+            width: 400px;
+            margin: auto;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        #right {
+            width: 400px;
+            margin: auto;
+            height: 400px;
+        }
+
+        #left input {
+            padding: 10px;
+            width: 80%;
+            margin: auto;
+            font-size: 15px;
+            border: 3px solid black;
+            border-radius: 5px;
+            font-weight: 400;
+            font-size: 18px;
+        }
+
+        #left button {
+            padding: 10px;
+            width: 86%;
+            margin: auto;
+            font-size: 18px;
+            margin-top: 20px;
+            background-color: rgb(138, 138, 15);
+            color: white;
+            font-weight: 500;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        #left button:hover{
+            background-color: rgb(216, 216, 13);
+            color: green;
+        }
+
+        button:active {
+            transform: translateY(4px);
+        }
+
+        #details {
+            border: 5px solid red;
+            height: 200px;
+            padding: 20px;
+            width: 75%;
+            border-radius: 10px;
+            background: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center; font-size: 50px;">Weather App</h1>
+    <div id="container">
+        
+        <div id="left">
+            <div>
+                <input type="text" id="name" placeholder="City Name">
+                <button onclick="getData()">Search</button>
+            </div>
+            <div id="details">
+                <h2 style="text-align: center; color: green; font-family: Arial, Helvetica, sans-serif;" id="cityName">City Name</h2>
+                <h3 style="color: blue; text-align: center;"><span id="type"> </span></h3>
+                <h3 style="font-family: Arial, Helvetica, sans-serif;">Temperature &nbsp;| <span id=temp> </span></h3>
+                <h3 style="font-family: Arial, Helvetica, sans-serif;">Humidity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | <span id="humidity"> </span></h3>
+            </div>
+        </div>
+        <div id="right">
+            
+            <iframe src="https://my-location.org/images/default_map_mobile.jpg" id = "map" style="width: 90%; height: 100%;" >
+            </iframe>
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+
+</html>
